@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import "styles/basic";
+@import "styles/variables";
+
+body {
+  background-color: var(--primary-bg-color);
+  font: 400 var(--primary-font-size) var(--primary-font-family) !important;
+  color: var(--primary-text-color) !important;
+}

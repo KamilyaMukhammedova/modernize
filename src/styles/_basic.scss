@@ -1,0 +1,44 @@
+%flex {
+  display: flex;
+}
+
+%alignCenter {
+  align-items: center !important;
+}
+
+%alignStart {
+  align-items: start;
+}
+
+%justifyEnd {
+  justify-content: end;
+}
+
+%justifySpaceBetween {
+  justify-content: space-between;
+}
+
+.flexEnd {
+  @extend %flex;
+  @extend %justifyEnd;
+  @extend %alignCenter;
+  gap: 5px;
+}
+
+.basicFlex {
+  @extend %flex;
+  @extend %alignCenter;
+  @extend %justifySpaceBetween;
+}
+
+.gap5 {
+  gap: 5px;
+}
+
+.gap10 {
+  gap: 10px;
+}
+
+.gap20 {
+  gap: 20px;
+}

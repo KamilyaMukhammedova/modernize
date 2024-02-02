@@ -1,0 +1,30 @@
+.header {
+  background-color: var(--white-color);
+  padding: 30px 20px;
+}
+
+.inner {
+  width: 100%;
+}
+
+.logoWrapper {
+  //width: 25%;
+  width: 250px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.searchWrapper {
+  //width: 40%;
+  width: 45%;
+}
+
+.userWrapper {
+  width: 35%;
+}
+
+.notificationsWrapper {
+  margin-right: 20px;
+}

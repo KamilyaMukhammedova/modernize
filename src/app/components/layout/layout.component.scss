@@ -1,0 +1,40 @@
+.sidebar {
+  height: 100vh;
+  background-color: var(--ant-primary-1) !important;
+}
+
+.sidebarInner {
+  height: inherit;
+  border-right: 1px solid #D7DBEC;
+  padding: 20px;
+}
+
+.sidebarSection {
+  margin-bottom: 30px;
+}
+
+.sidebarItem {
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #B6CBFF;
+  }
+}
+
+.activeSidebarItem {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+}
+
+.sectionTitle {
+  color: var(--light-text-color);
+  font-size: 12px;
+  padding: 0 15px;
+}
+
+.contentWrapper {
+  padding: 30px 35px;
+}
