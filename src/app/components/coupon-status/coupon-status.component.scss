@@ -1,0 +1,17 @@
+%couponStatus {
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  width: 55%;
+}
+
+.activeStatus {
+  @extend %couponStatus;
+  background-color: var(--light-green-color);
+  color: var(--green-color);
+}
+
+.expiredStatus {
+  @extend %couponStatus;
+  background-color: var(--light-text-color);
+}

@@ -5,7 +5,7 @@
       <aside class="sidebarInner">
         <div class="sidebarSection">
           <ng-container *ngFor="let item of items['main']">
-            <div class="sidebarItem ant-flex ant-flex-align-center gap20" [routerLink]="item.path">
+            <div class="sidebarItem ant-flex ant-flex-align-center gap20" [routerLink]="item.path" routerLinkActive="activeSidebarItem">
               <img [src]="getItemPath(item.iconPath)" [alt]="item.title">
               <span>{{item.title}}</span>
             </div>
@@ -14,7 +14,7 @@
         <div class="sidebarSection">
           <p class="sectionTitle">Other Information</p>
           <ng-container *ngFor="let item of items['otherInformation']">
-            <div class="sidebarItem ant-flex ant-flex-align-center gap20" [routerLink]="item.path">
+            <div class="sidebarItem ant-flex ant-flex-align-center gap20" [routerLink]="item.path" routerLinkActive="activeSidebarItem">
               <img [src]="getItemPath(item.iconPath)" [alt]="item.title">
               <span>{{item.title}}</span>
             </div>
@@ -23,7 +23,7 @@
         <div class="sidebarSection">
           <p class="sectionTitle">Settings</p>
           <ng-container *ngFor="let item of items['settings']">
-            <div class="sidebarItem ant-flex ant-flex-align-center gap20" [routerLink]="item.path">
+            <div class="sidebarItem ant-flex ant-flex-align-center gap20" [routerLink]="item.path" routerLinkActive="activeSidebarItem">
               <img [src]="getItemPath(item.iconPath)" [alt]="item.title">
               <span>{{item.title}}</span>
             </div>

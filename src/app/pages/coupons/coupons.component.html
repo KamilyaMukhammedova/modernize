@@ -1,5 +1,40 @@
 <section>
-  <div>
-    <h2>Coupons</h2>
+  <div class="ant-flex ant-flex-align-center ant-flex-justify-space-between">
+    <h2 class="pageTitle">Coupons</h2>
+    <button class="primaryBtn ant-flex ant-flex-align-center gap5">
+      <img src="assets/icons/plus.svg" alt="Plus icon">
+      <span>Create</span>
+    </button>
+  </div>
+  <div class="pageContentWrapper">
+    <div>
+      <nz-tabset (nzSelectChange)="getCurrentTab($event)">
+        <nz-tab nzTitle="All Coupons"></nz-tab>
+        <nz-tab nzTitle="Active Coupons"></nz-tab>
+        <nz-tab nzTitle="Expired Coupons"></nz-tab>
+      </nz-tabset>
+    </div>
+    <div class="ant-flex ant-flex-align-center ant-flex-justify-space-between" style="margin-bottom: 40px">
+      <div class="ant-flex ant-flex-align-center gap10">
+        <nz-select nzPlaceHolder="Filter" style="width: 10rem"></nz-select>
+        <nz-input-group [nzPrefix]="suffixIconSearch" style="width: 20rem">
+          <input type="text" nz-input placeholder="Search..."/>
+        </nz-input-group>
+        <ng-template #suffixIconSearch>
+          <span nz-icon nzType="search"></span>
+        </ng-template>
+      </div>
+      <div class="ant-flex ant-flex-align-center gap10">
+        <button nz-button nzType="default" class="defaultButton">
+          <img src="assets/icons/pencil.svg" alt="Pencil icon">
+        </button>
+        <button nz-button nzType="default" class="defaultButton">
+          <img src="assets/icons/delete.svg" alt="Delete icon">
+        </button>
+      </div>
+    </div>
+    <app-coupons-table [listOfData]="couponsArr"></app-coupons-table>
   </div>
 </section>
+
+

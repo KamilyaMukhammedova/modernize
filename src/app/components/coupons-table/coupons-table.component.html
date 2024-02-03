@@ -1,0 +1,45 @@
+<nz-table
+  [nzData]="listOfData"
+  [nzFrontPagination]=false
+>
+  <thead>
+  <tr>
+    <th
+      [nzChecked]="checked"
+      nzLabel="Select all"
+      (nzCheckedChange)="onAllChecked($event)"
+    ></th>
+    <th>Coupon Name</th>
+    <th>Usage</th>
+    <th>Status</th>
+    <th>Date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let data of listOfData">
+    <td
+      [nzChecked]="setOfCheckedId.has(data.id)"
+      nzLabel="Select all"
+      (nzCheckedChange)="onItemChecked(data.id, $event)"
+    ></td>
+    <td>
+      <div class="ant-flex ant-flex-align-center gap10">
+        <app-coupon-type [type]="data.type"></app-coupon-type>
+        <div class="couponMainInfo">
+          <p class="couponTitle">{{ data.title }}</p>
+          <p>{{ data.category }}</p>
+        </div>
+      </div>
+    </td>
+    <td>{{ data.usage }} times</td>
+    <td>
+      <app-coupon-status [status]="data.status"></app-coupon-status>
+    </td>
+    <td>{{ data.date }}</td>
+  </tr>
+  </tbody>
+</nz-table>
+<div class="ant-flex ant-flex-align-center ant-flex-justify-space-between tableFooter">
+  <nz-pagination [nzPageIndex]="1" [nzTotal]="totalNumber"></nz-pagination>
+  <div>{{totalNumber}} Results</div>
+</div>
