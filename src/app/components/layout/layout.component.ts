@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForOf } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NzContentComponent, NzLayoutComponent, NzSiderComponent } from 'ng-zorro-antd/layout';
 import { NzIconDirective } from 'ng-zorro-antd/icon';
 import { NzMenuDirective, NzMenuItemComponent } from 'ng-zorro-antd/menu';
@@ -20,6 +20,7 @@ import { SIDEBAR_ITEMS } from '../../../constants/sidebarItems';
     HeaderComponent,
     NgForOf,
     RouterLink,
+    RouterLinkActive,
   ],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'

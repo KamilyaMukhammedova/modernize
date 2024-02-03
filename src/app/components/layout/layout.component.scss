@@ -5,7 +5,7 @@
 
 .sidebarInner {
   height: inherit;
-  border-right: 1px solid #D7DBEC;
+  box-shadow: -1px 0 0 0 #D7DBEC inset;
   padding: 20px;
 }
 
@@ -16,7 +16,7 @@
 .sidebarItem {
   padding: 15px;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 
   &:hover {
     cursor: pointer;
